@@ -1,4 +1,5 @@
-const electron = require('electron')
+const electron = require('electron');
+const uuid = require("uuid").v4;
 const {
     app,
     BrowserWindow,
@@ -6,6 +7,7 @@ const {
 } = electron;
 
 let mainWindow;
+let editWindow;
 
 app.allowRendererProcessReuse = false;
 
@@ -14,10 +16,10 @@ app.on("ready", () => {
         webPreferences: {
             nodeIntegration: true
         },
-        title: 'Temperature Converter v1.0'
+        title: 'Memo by Ieffe'
     });
 
-    mainWindow.loadURL(`file://${__dirname}/index.html`);
+    mainWindow.loadURL(`file://${__dirname}/main.html`);
     mainWindow.on("closed", () => {
         app.quit();
         mainWindow = null;
