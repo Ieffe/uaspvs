@@ -13,7 +13,7 @@
   "author": "Ieffe",
   "license": "ISC",
   "dependencies": {
-    "electron": "^8.0.2",
+    "electron": "^15.5.5",
     "save": "^2.4.0",
     "uuid": "^7.0.3"
   }
